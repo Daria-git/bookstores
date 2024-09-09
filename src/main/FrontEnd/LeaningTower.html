@@ -1,0 +1,308 @@
+<!DOCTYPE html >
+<head>
+    <meta charset="utf-8">
+    <title>Choose book</title>
+    <style>
+        /*********************************************************************************/
+        /* Heading Titles                                                                */
+        /*********************************************************************************/
+
+        .title {
+            margin-bottom: 3em;
+        }
+
+        .title h2 {
+            font-weight: 400;
+            font-size: 1.5em;
+            color: #000000;
+        }
+
+        .title .byline {
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 0.5em;
+            color: #6F6F6F;
+        }
+
+
+        /*********************************************************************************/
+        /* Header                                                                        */
+        /*********************************************************************************/
+
+        #header-wrapper {
+            background: #483D8B;
+        }
+
+        #header {
+            position: relative;
+            height: 70px;
+        }
+
+        /*********************************************************************************/
+        /* Logo                                                                          */
+        /*********************************************************************************/
+
+        #logo {
+            position: absolute;
+            top: 0.1em;
+            width: 100%;
+
+        }
+
+        #logo h1 {
+            display: inline-block;
+            font-size: 2.0em;
+            text-transform: uppercase;
+            font-weight: 500;
+            color: #ED7070;
+            padding-right: 0.50em;
+            border-right: 1px solid rgba(0, 0, 0, .1);
+        }
+
+        #logo a {
+            text-decoration: none;
+            color: #FFF;
+        }
+
+        /*********************************************************************************/
+        /* Menu                                                                          */
+        /*********************************************************************************/
+
+        #menu {
+            position: absolute;
+            right: 0;
+            top: 0.9em;
+        }
+
+        #menu ul {
+            display: inline-block;
+        }
+
+        #menu li {
+            display: block;
+            float: left;
+            text-align: center;
+        }
+
+        #menu li a, #menu li span {
+            display: inline-block;
+            margin-left: 1px;
+            padding: 1em 1.5em 0em 1.5em;
+            letter-spacing: 0.10em;
+            text-decoration: none;
+            font-size: 0.8em;
+            text-transform: uppercase;
+            outline: 0;
+            color: #FFF;
+        }
+
+        #menu li:hover a, #menu li.active a, #menu li.active span {
+        }
+
+        #menu .current_page_item a {
+            color: #FFF;
+        }
+
+        /*********************************************************************************/
+        /* Main-wrapper                                                                     */
+        /*********************************************************************************/
+
+        #main-wrapper {
+            background: #EEEEEE;
+        }
+
+        #main {
+            position: relative;
+            height: 70px;
+        }
+
+        /*********************************************************************************/
+        /* Vertical-menu                                                                         */
+        /*********************************************************************************/
+
+        .menu a {
+            background: #483D8B;
+            color: #fff;
+            padding: 10px;
+            display: block;
+            border-bottom: 1px solid #666;
+            transition: 0.5s all;
+            text-decoration: none;
+        }
+
+        .vertical-menu {
+            width: 175px;
+            margin: 0px;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .menu a:hover {
+            background: #666;
+            padding: 10px 0 10px 20px;
+        }
+
+        .menu li:first-child a, .menu li .ver-menu li:first-child a {
+            border-radius: 3px 3px 0 0;
+        }
+
+        .menu li:last-child a, .menu li .ver-menu li:last-child a {
+            border-radius: 0 0 3px 3px;
+            border-bottom: 0;
+        }
+
+        .menu li .ver-menu li a {
+            border-radius: 0;
+        }
+
+        .vert-menu {
+            position: relative;
+        }
+
+        .ver-menu {
+            position: absolute;
+            width: 100%;
+            left: 100%;
+            top: -9999px;
+            opacity: 0;
+            border-left: 10px solid transparent;
+            transition: 0.5s opacity;
+        }
+
+        .vert-menu:hover .ver-menu {
+            opacity: 1;
+            top: 0;
+        }
+
+        .vert-menu::after {
+            content: "";
+            position: absolute;
+            border: 5px solid;
+            border-color: transparent transparent transparent #eee;
+            top: 1em;
+            right: 0.7em;
+            transition: 0.5s;
+        }
+
+        .vert-menu::after {
+            transform: scaleX(1);
+        }
+
+        /*********************************************************************************/
+        /*Button                                                      */
+        /*********************************************************************************/
+        .button {
+            display: inline-block;
+            padding: 0.5em 2em;
+            background: #483D8B;
+            -moz-transition: opacity 0.25s ease-in-out;
+            -webkit-transition: opacity 0.25s ease-in-out;
+            -o-transition: opacity 0.25s ease-in-out;
+            -ms-transition: opacity 0.25s ease-in-out;
+            transition: opacity 0.25s ease-in-out;
+            letter-spacing: 0.10em;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 200;
+            color: #FFF;
+            border-radius: 10px;
+        }
+
+        .button:hover {
+            background: #EEEEEE;
+        }
+
+        .button-big {
+            padding: 1.6em 4em;
+            font-size: 0.3em;
+            font-weight: 200;
+        }
+
+        /*********************************************************************************/
+        /*Text                                                   */
+        /*********************************************************************************/
+        .image {
+            text-align: center;
+            margin-left: -1450px;
+            margin-right: -1300px;
+            margin-top: -80px;
+            font-size: 0.8em;
+        }
+
+        .text {
+            margin-right: -510px;
+            margin-top: -410px;
+            font-size: 1em;
+            line-height: 1.5;
+        }
+
+        .text1 {
+            margin-right: -80px;
+            margin-top: 240px;
+            font-size: 1.2em;
+            line-height: 30px;
+        }
+
+        .text2 {
+            margin-right: -150px;
+            margin-top: 320px;
+            font-size: 1.3em;
+            line-height: 42px;
+        }
+    </style>
+</head>
+<body>
+<div id="header-wrapper">
+    <div id="header" class="container">
+        <div id="logo">
+            <h1><span class="fa fa-bolt"></span><a href="file:///C:/Users/Daria/IdeaProjects/bookstores/src/main/FrontEnd/index.html">BUKOVKA</a></h1>
+        </div>
+        <div id="menu">
+            <ul>
+                <li class="current_page_item"><a
+                        href="file:///C:/Users/Daria/IdeaProjects/bookstores/src/main/FrontEnd/NewBook.html" accesskey="1"
+                        title="book">New books</a></li>
+                <li><a href="file:///C:/Users/Daria/IdeaProjects/bookstores/src/main/FrontEnd/BestSellers.html" accesskey="3" title="">Bestsellers</a></li>
+                <li><a href="file:///C:/Users/Daria/IdeaProjects/bookstores/src/main/FrontEnd/BuyBook.html" accesskey="3" title="">Buy</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="main-wrapper">
+    <div id="main" class="container">
+        <div class="vertical-menu">
+            <ul class="menu">
+                <li><a href="file:///C:/Users/Daria/IdeaProjects/bookstores/src/main/FrontEnd/Books.html">Books</a></li>
+                <li class="vert-menu"><a href="#">Genres</a>
+                    <ul class="ver-menu">
+                        <li><a href="file:///C:/Users/Daria/IdeaProjects/bookstores/src/main/FrontEnd/fantas.html">Fantasy</a></li>
+                        <li><a href="file:///C:/Users/Daria/IdeaProjects/bookstores/src/main/FrontEnd/Detectives.html">Detectives</a></li>
+                        <li><a href="file:///C:/Users/Daria/IdeaProjects/bookstores/src/main/FrontEnd/Adventures.html">Adventures</a></li>
+                    </ul>
+                </li>
+                <li><a href="file:///C:/Users/Daria/IdeaProjects/bookstores/src/main/FrontEnd/Authors.html">Authors</a></li>
+            </ul>
+        </div>
+        <div class="image">
+            <img class="ty-pict" id="det_img_560004976"
+                 src="img\MurderTower.jpg" width="250"
+                 height="385"/>
+            <div class="text">
+                <h2>Murder at the Leaning Tower<br>Author: T.A. Williams</h2>
+                <a href="file:///C:/Users/Daria/IdeaProjects/bookstores/src/main/FrontEnd/BuyBook.html" class="button">Buy</a>
+            </div>
+            <div class="text2">
+                <h4>When Dan Armstrong is asked to provide security at a private villa on the outskirts of Pisa, he’s <br>pretty sure it will be an easy job. Villa Gregory is remote; the gathered guests are rich – what could<br>possibly go wrong?
+A glittering gathering...
+                </h4>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

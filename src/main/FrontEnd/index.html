@@ -1,0 +1,259 @@
+<!DOCTYPE html >
+<head>
+    <meta charset="utf-8">
+    <title>Choose book</title>
+    <style>
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 11pt;
+            font-weight: 300;
+            color: #0000
+        }
+
+        #bg {
+            height: 100%;
+            position: fixed;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+
+        h1, h2, h3 {
+            margin: 0;
+            padding: 0;
+            font-weight: 600;
+            color: #2b2b2b;
+        }
+
+        p, ol, ul {
+            margin-top: 0;
+        }
+
+        ol, ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        p {
+            line-height: 180%;
+        }
+
+        a {
+            color: #2C383B;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        .container {
+            margin: 0px auto;
+            width: 1200px;
+        }
+
+
+        /*********************************************************************************/
+        /* Button Style                                                                  */
+        /*********************************************************************************/
+
+        .button {
+            display: inline-block;
+            padding: 0.7em 2em;
+            background: #DEB887;
+            -moz-transition: opacity 0.25s ease-in-out;
+            -webkit-transition: opacity 0.25s ease-in-out;
+            -o-transition: opacity 0.25s ease-in-out;
+            -ms-transition: opacity 0.25s ease-in-out;
+            transition: opacity 0.25s ease-in-out;
+            letter-spacing: 0.20em;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #FFF;
+        }
+
+        .button:hover {
+            background: #DEB887;
+        }
+
+        .button-big {
+            padding: 1.6em 4em;
+            font-size: 1.4em;
+            font-weight: 900;
+        }
+
+        /*********************************************************************************/
+        /* Heading Titles                                                                */
+        /*********************************************************************************/
+
+        .title {
+            margin-bottom: 3em;
+        }
+
+        .title h2 {
+            font-weight: 400;
+            font-size: 2.8em;
+            color: #000000;
+        }
+
+        .title .byline {
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 1.1em;
+            color: #6F6F6F;
+        }
+
+
+        /*********************************************************************************/
+        /* Header                                                                        */
+        /*********************************************************************************/
+
+        #header-wrapper {
+            background: #FF0033;
+        }
+
+        #header {
+            height: 100px;
+        }
+
+        /*********************************************************************************/
+        /* Logo                                                                          */
+        /*********************************************************************************/
+
+        #logo {
+            position: absolute;
+            top: 2em;
+            width: 100%;
+        }
+
+        #logo h1 {
+            display: inline-block;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #ED7070;
+            padding-right: 0.50em;
+            border-right: 1px solid rgba(0, 0, 0, .1);
+        }
+
+        #logo a {
+            text-decoration: none;
+            color: #FFF;
+        }
+
+        /*********************************************************************************/
+        /* Menu                                                                          */
+        /*********************************************************************************/
+
+        #menu {
+            right: 0;
+            top: 1.6em;
+        }
+
+        #menu ul {
+            display: inline-block;
+        }
+
+        #menu li {
+            display: block;
+            float: left;
+            text-align: center;
+        }
+
+        #menu li a, #menu li span {
+            display: inline-block;
+            margin-left: 1px;
+            padding: 1em 1.5em 0em 1.5em;
+            letter-spacing: 0.10em;
+            text-decoration: none;
+            font-size: 1em;
+            text-transform: uppercase;
+            outline: 0;
+            color: #FFF;
+        }
+
+        #menu li:hover a, #menu li.active a, #menu li.active span {
+        }
+
+        #menu .current_page_item a {
+            color: #FFF;
+        }
+
+        /*********************************************************************************/
+        /* Banner                                                                        */
+        /*********************************************************************************/
+
+
+        #header-featured {
+            padding: 10em 0em;
+            background-position: center;
+            background-size: cover;
+        }
+
+        #banner-wrapper {
+        }
+
+        #banner {
+            overflow: hidden;
+            width: 1000px;
+            text-align: center;
+            color: rgba(255, 255, 255, .7);
+            font-size: 1.5em;
+        }
+
+        #banner a {
+            color: rgba(255, 255, 255, .9);
+        }
+
+        #banner h2 {
+            padding-top: 100px;
+            padding-bottom: 0.50em;
+            font-weight: 400;
+            font-size: 2.7em;
+            color: #FFF;
+        }
+
+        #banner .button {
+            margin-right: 10px;
+            margin-top: 2em;
+            background:#D2B48C;
+        }
+
+        #banner .butt {
+            margin-bottom: 100px;
+        }
+
+        #banner strong {
+            color: #FFF;
+        }
+
+        #banner span {
+            display: block;
+            padding-top: 0.20em;
+            text-transform: uppercase;
+            font-size: 1.2em;
+            color: #A2A2A2;
+        }
+
+    </style>
+</head>
+<body>
+<p><img src="https://cs14.pikabu.ru/post_img/big/2021/06/23/6/1624439554133925287.jpg" id="bg" alt="Иллюстрация"></p>
+<div id="header-featured">
+    <div id="banner-wrapper">
+        <div id="banner" class="container">
+            <h2>Choose interesting books</h2>
+            <a href="SignIn.html" class="button">Sign in</a>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
